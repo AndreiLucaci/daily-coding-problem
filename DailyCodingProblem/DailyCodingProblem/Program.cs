@@ -15,7 +15,8 @@ namespace DailyCodingProblem
             new Dictionary<DateTime, ISolution>
             {
                 [new DateTime(2019, 3, 6)] = new Day6(),
-                [new DateTime(2019, 3, 7)] = new Day7()
+                [new DateTime(2019, 3, 7)] = new Day7(),
+                [new DateTime(2019, 3, 8)] = new Day8(),
             };
 	}
 }
