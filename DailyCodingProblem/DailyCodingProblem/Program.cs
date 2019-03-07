@@ -14,6 +14,7 @@ namespace DailyCodingProblem
         private static Dictionary<DateTime, ISolution> Methods { get; } =
             new Dictionary<DateTime, ISolution>
             {
+                [new DateTime(2019, 3, 6)] = new Day6(),
                 [new DateTime(2019, 3, 7)] = new Day7()
             };
 	}
