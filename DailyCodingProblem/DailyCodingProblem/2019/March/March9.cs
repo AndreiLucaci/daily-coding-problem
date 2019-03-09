@@ -58,12 +58,7 @@ namespace DailyCodingProblem._2019.March
 
             var value = 1;
 
-            if (sortedSet.Any(i => value++ != i))
-            {
-                value--;
-            }
-
-            return value;
+            return (sortedSet.Any(i => value++ != i)) ? --value : value;
         }
     }
 }
