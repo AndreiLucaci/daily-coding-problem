@@ -12,7 +12,7 @@ namespace DailyCodingProblem._2019.March
 	/// For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 	/// Bonus: Can you do this in one pass?
 	/// </summary>
-	public class Day6 : ISolution
+	public class March6 : ISolution
     {
 	    public void Solve()
 	    {
@@ -36,7 +36,7 @@ namespace DailyCodingProblem._2019.March
 	    }
 
 		/// <summary>
-		/// Complexity of O(n*log(n))
+		/// Complexity of O(n log(n))
 		/// </summary>
 	    private bool ExistsBinarySearch(IEnumerable<int> input, int target)
 	    {
