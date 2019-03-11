@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace DailyCodingProblem._2019.March
 {
@@ -31,25 +27,30 @@ namespace DailyCodingProblem._2019.March
 
         private int Count(string encodedMessage)
         {
-            var count = Enumerable.Repeat(1, 2).ToList();
+            var first = 1;
+            var second = 1;
 
             for (var i = 2; i <= encodedMessage.Length; i++)
             {
-                count.Add(0);
+                var current = 0;
 
                 if (encodedMessage[i - 2] > '0')
                 {
-                    count[i] = count[i - 1];
+                    current = second;
                 }
 
-                if (encodedMessage[i - 2] == '1' ||
-                    encodedMessage[i - 2] == '2' && encodedMessage[i - 1] < '7')
+                if (encodedMessage[i - 2] != '1' && (encodedMessage[i - 2] != '2' || encodedMessage[i - 1] >= '7'))
                 {
-                    count[i] += count[i - 2];
+                    second = current;
+                    continue;
                 }
+
+                current += first;
+                first = second;
+                second = current;
             }
 
-            return count.Last();
+            return second;
         }
     }
 }
