@@ -15,8 +15,7 @@ namespace DailyCodingProblem._2019.March
             var input1 = "12";
             var expectedOutput1 = 2;
             var result1 = Count(input1);
-
-
+            
             var input2 = "111";
             var expectedOutput2 = 3;
             var result2 = Count(input2);
