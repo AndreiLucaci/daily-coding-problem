@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
 using NUnit.Framework;
-using Enumerable = System.Linq.Enumerable;
 
 namespace DailyCodingProblem._2019.March
 {
@@ -15,9 +13,9 @@ namespace DailyCodingProblem._2019.March
     /// For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should give 3.
     /// You can modify the input array in-place.
     /// </summary>
-    public class March9 : ISolution
+    public class March9 : BaseSolution
     {
-        public void Solve()
+        protected override void Solution()
         {
             var input1 = new[] {3, 4, -1, 1};
             var expectedOutput1 = 2;
@@ -45,8 +43,6 @@ namespace DailyCodingProblem._2019.March
             Assert.AreEqual(expectedOutput3, result3, "Case [3]: The expected output is not correct.");
             Assert.AreEqual(expectedOutput4, result4, "Case [4]: The expected output is not correct.");
             Assert.AreEqual(expectedOutput5, result5, "Case [5]: The expected output is not correct.");
-
-            Console.WriteLine("Ok");
         }
 
         /// <summary>

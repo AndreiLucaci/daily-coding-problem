@@ -14,9 +14,9 @@ namespace DailyCodingProblem._2019.March
     ///     return pair
     /// Implement car and cdr.
     /// </summary>
-    public class March10 : ISolution
+    public class March10 : BaseSolution
     {
-        public void Solve()
+        protected override void Solution()
         {
             var expectedFirst = 3;
             var expectedLast = 4;
@@ -26,8 +26,6 @@ namespace DailyCodingProblem._2019.March
 
             Assert.AreEqual(expectedFirst, first);
             Assert.AreEqual(expectedLast, last);
-
-            Console.WriteLine("Ok");
         }
 
         private Func<Func<int, int, int>, int> Cons(int a, int b)

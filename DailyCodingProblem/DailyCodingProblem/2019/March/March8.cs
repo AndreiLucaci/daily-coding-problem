@@ -16,9 +16,9 @@ namespace DailyCodingProblem._2019.March
     /// node = Node('root', Node('left', Node('left.left')), Node('right'))
     /// assert deserialize(serialize(node)).left.left.val == 'left.left'
     /// </summary>
-    public class March8 : ISolution
+    public class March8 : BaseSolution
     {
-        public void Solve()
+        protected override void Solution()
         {
             var expectedString = "left.left";
             var input = new Node("root", new Node("left", new Node(expectedString)), new Node("right"));
@@ -27,8 +27,6 @@ namespace DailyCodingProblem._2019.March
             var resultNode = Deserialize(result);
 
             Assert.AreEqual(expectedString, resultNode.Left.Left.Val);
-
-            Console.WriteLine("Ok");
         }
 
         private const string End = "END";
