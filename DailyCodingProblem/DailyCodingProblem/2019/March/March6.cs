@@ -12,9 +12,9 @@ namespace DailyCodingProblem._2019.March
 	/// For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 	/// Bonus: Can you do this in one pass?
 	/// </summary>
-	public class March6 : ISolution
+	public class March6 : BaseSolution
     {
-	    public void Solve()
+	    protected override void Solution()
 	    {
 		    var input = new[] {10, 15, 3, 7};
 		    var target = 17;
@@ -23,8 +23,6 @@ namespace DailyCodingProblem._2019.March
 		    var result = ExistsBinarySearch(input, target);
 
 			Assert.AreEqual(expectedResult, result, "The answer is not correct");
-
-		    Console.WriteLine("Ok");
 	    }
 
 		/// <summary>

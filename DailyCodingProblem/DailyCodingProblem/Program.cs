@@ -20,6 +20,7 @@ namespace DailyCodingProblem
                 [new DateTime(2019, 3, 9)] = new March9(),
                 [new DateTime(2019, 3, 10)] = new March10(),
                 [new DateTime(2019, 3, 11)] = new March11(),
+                [new DateTime(2019, 3, 12)] = new March12(),
             };
 	}
 }

@@ -12,9 +12,9 @@ namespace DailyCodingProblem._2019.March
     /// input was [3, 2, 1], the expected output would be [2, 3, 6].
     /// Follow-up: what if you can't use division?
     /// </summary>
-    public class March7 : ISolution
+    public class March7 : BaseSolution
     {
-        public void Solve()
+        protected override void Solution()
         {
             var input1 = new[] { 1, 2, 3, 4, 5 };
             var input2 = new[] { 3, 2, 1 };
@@ -27,8 +27,6 @@ namespace DailyCodingProblem._2019.March
 
             CollectionAssert.AreEqual(expectedOutput1, solve1, "The example 1 is not ok");
             CollectionAssert.AreEqual(expectedOutput2, solve2, "The example 2 is not ok");
-
-            Console.WriteLine("Ok");
         }
 
         private IEnumerable<int> ProdArray(IReadOnlyCollection<int> input)
