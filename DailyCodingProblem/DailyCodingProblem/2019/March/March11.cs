@@ -28,6 +28,10 @@ namespace DailyCodingProblem._2019.March
         }
     }
 
+    /// <summary>
+    /// The solution is from here https://stackoverflow.com/a/5992763/1432385 this is really hard to do in C#, since C# doesn't generally 
+    /// let you manipulate references at that lower level
+    /// </summary>
     public unsafe class XorLinkedList : IDisposable, IEnumerable<int>
     {
         private readonly Node* _firstNode;
